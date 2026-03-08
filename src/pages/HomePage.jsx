@@ -22,14 +22,25 @@ export default function HomePage() {
               to={`/editions/${edition.id}`}
               className="text-decoration-none text-dark"
             >
-              <div className="card border-0 bg-transparent text-center h-100 hover-card">
-                <div className="card-body d-flex flex-column align-items-center justify-content-center">
-                  <div className=" mb-3">
-                    {edition.logo_url &&
-                      <img src={`http://127.0.0.1:8000/storage/${edition.logo_url}`} alt={`Logo ${edition.year}`} className="img-fluid logo-img p-5"/>
-                    }
+              <div className="card hover-card text-center h-100 border-0 rounded-circle py-3 px-5">
+                <div className="card-body d-flex flex-column align-items-center justify-content-center p-4">
+                  <div
+                    className="mb-0 d-flex align-items-center justify-content-center"
+                    style={{ height: "150px", width: "100%" }}
+                  >
+                    {edition.logo_url && (
+                      <img
+                        src={`http://127.0.0.1:8000/storage/${edition.logo_url}`}
+                        alt={`Logo ${edition.year}`}
+                        className="img-fluid"
+                        style={{ maxHeight: "100%", objectFit: "contain" }}
+                      />
+                    )}
                   </div>
-                  <h4 className="fw-bold text-first mb-1">Sanremo {edition.year}</h4>
+
+                  <h3 className="fw-bold text-first mb-0">
+                    Sanremo {edition.year}
+                  </h3>
                 </div>
               </div>
             </Link>

@@ -22,8 +22,8 @@ export default function EditionPage() {
 
   return (
     <div className="container mt-5">
-      <Link to="/" className="btn border-0 mb-4 p-0">
-        <i className="bi bi-arrow-left"></i> Torna all'archivio
+      <Link to="/" className="btn border-0 mb-4 p-0 fs-3">
+        <i className="bi bi-arrow-left"></i> Torna
       </Link>
 
       <div className="row align-items-center mb-5">
@@ -36,7 +36,7 @@ export default function EditionPage() {
           />
         </div>
         <div className="col-md-8 text-md-end text-center mt-3 mt-md-0">
-          <h1 className="display-4 fw-bold">
+          <h1 className="display-4 fw-bold text-first">
             Festival di Sanremo {edition.year}
           </h1>
 
@@ -47,11 +47,11 @@ export default function EditionPage() {
             </p>
             <p className="text-muted mb-1">
               Co-conduzione: {edition.co_hosts}
-              <i className="bi bi-people-fill ms-2"></i>
+              <i className="bi bi-people-fill ms-2 text-first"></i>
             </p>
-            <p className="text-muted small">
+            <p className="text-first bg-light small badge">
               Sede: {edition.location}
-              <i className="bi bi-geo-alt-fill ms-2"></i>
+              <i className="bi bi-geo-alt-fill ms-2 text-first"></i>
             </p>
           </div>
         </div>
@@ -109,7 +109,7 @@ export default function EditionPage() {
                         {song.awards.map((award) => (
                           <span
                             key={award.id}
-                            className="badge bg-warning text-dark me-2"
+                            className="badge bg-light text-first me-2"
                           >
                             <i className="bi bi-trophy-fill me-1"></i>{" "}
                             {award.name}
