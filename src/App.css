@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.text-first {
+    color: #6b8da9 !important ;
+}
+
+.bg-main {
+    background-color: #d2d7db !important;
+}
+
+.card:hover{
+  scale: 1.03;
+}
+
+#video-home {
+  width: 100%;
+  aspect-ratio: 628 / 233;
+  max-height: 1060px;
+  min-height: 500px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: brightness(50%);
+}
+
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+    scale: 1.03;
+    transition: opacity 0.2s;
+  }
+}
+
+.search-input {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  outline: none;
+  
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    
+  }
+}
