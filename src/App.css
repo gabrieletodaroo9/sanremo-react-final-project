@@ -18,6 +18,10 @@
   scale: 1.03;
 }
 
+.col-12 .card:hover{
+  scale: 1.0;
+}
+
 #video-home {
   width: 100%;
   aspect-ratio: 628 / 233;
