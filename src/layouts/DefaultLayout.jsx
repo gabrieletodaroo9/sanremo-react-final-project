@@ -19,7 +19,7 @@ export default function DefaultLayout() {
             
             {showVideo && <VideoHeader />}
             
-            <main className="flex-grow-1 py-4 bg-main">
+            <main className="flex-grow-1 py-2 py-md-4 bg-main">
                 <div className="container">
                     <Outlet />
                 </div>
@@ -34,7 +34,7 @@ export default function DefaultLayout() {
             <i className={`bi ${isRedTheme ? 'bi-palette-fill text-danger' : 'bi-palette-fill text-first'} fs-5`}></i>
             <span>cambia tema</span>
         </button> 
-        <p className="mb-0 opacity-75">&copy; 2026 Sanremissimo. Tutti i diritti riservati.</p>
+        <p className="mb-0 opacity-75 text-end text-sm-center">&copy; 2026 Sanremissimo. Tutti i diritti riservati.</p>
     </div>
 </footer>
         </div>

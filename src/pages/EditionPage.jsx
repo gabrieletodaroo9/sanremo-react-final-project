@@ -35,7 +35,7 @@ export default function EditionPage() {
             style={{ maxHeight: "250px", objectFit: "contain" }}
           />
         </div>
-        <div className="col-md-8 text-md-end text-center mt-3 mt-md-0">
+        <div className="col-md-8 text-md-end text-center mt-3 mt-md-5">
           <h1 className="display-4 fw-bold text-first">
             Festival di Sanremo {edition.year}
           </h1>
@@ -70,9 +70,9 @@ export default function EditionPage() {
                 <div className="card-body px-0 pt-0">
                   <div className="row align-items-center">
                     <div className="col-md-1 text">
-                      <h2 className="fw-bold text-first mb-0">
+                      <h3 className="fw-bold text-first mb-0">
                         {song.position}°
-                      </h2>
+                      </h3>
                     </div>
 
                     <div className="col-md-5">

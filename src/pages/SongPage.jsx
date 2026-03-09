@@ -17,14 +17,14 @@ export default function SongPage() {
   if (!song) return <div className="container mt-5 text-center text-muted">Caricamento...</div>;
 
   return (
-    <div className="container mt-1 pb-5">
+    <div className="container mt-5 pt-4 pt-md-0 pb-5">
       <button onClick={() => navigate(-1)} className="btn fs-3 border-0 mb-5 p-0 text-muted">
         <i className="bi bi-arrow-left"></i> Torna
       </button>
 
       <div className="row">
         <div className="col-md-5">
-          <div className="sticky-top" style={{ top: "20px" }}>
+          <div className="sticky-md-top" style={{ top: "150px" }}>
             <h1 className="display-4 fw-bold text-uppercase mb-2">{song.title}</h1>
             
             <div className="mb-4">
@@ -60,7 +60,7 @@ export default function SongPage() {
         <div className="col-md-7 ps-md-5">
           
           {song.youtube_url && (
-            <div className="ratio ratio-16x9 mb-5 shadow-sm rounded bg-dark overflow-hidden">
+            <div className="ratio ratio-16x9 mb-4 mb-md-5 shadow-sm rounded bg-dark overflow-hidden">
               <iframe
                 src={`https://www.youtube.com/embed/${song.youtube_url.split('v=')[1]}`}
                 title="YouTube Video"
@@ -69,9 +69,9 @@ export default function SongPage() {
             </div>
           )}
 
-          <h3 className="fw-bold text-uppercase mb-4 text-first tracking-widest ps-4">Testo</h3>
+          <h3 className="fw-bold text-uppercase mb-md-4 text-first tracking-widest ps-0 ps-md-4">Testo</h3>
           <div 
-            className="lyrics-display p-4 rounded bg-main" 
+            className="lyrics-display ps-0 ps-md-4 rounded bg-main" 
             style={{ 
               whiteSpace: "pre-line", 
               fontSize: "1.15rem", 

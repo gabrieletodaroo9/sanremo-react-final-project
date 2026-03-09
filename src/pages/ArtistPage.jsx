@@ -17,7 +17,7 @@ export default function ArtistPage() {
   if (!artist) return <div className="container mt-5 text-center text-muted">Caricamento artista...</div>;
 
   return (
-    <div className="container mt-5 pb-5">
+    <div className="container mt-5 pt-4 pt-md-0 pb-5">
       <button onClick={() => navigate(-1)} className="btn border-0 mb-4 p-0 fs-3">
         <i className="bi bi-arrow-left"></i> Torna
       </button>
@@ -25,8 +25,8 @@ export default function ArtistPage() {
       <div className="row g-5">
         <div className="col-md-4">
           <div>
-            <h1 className="fw-bold text-uppercase mb-0 mt-3 text-first display-3">{artist.name}</h1>
-            <span className="text-secondary text-uppercase">{artist.type}</span>
+            <h1 className="fw-bold text-uppercase mb-0 mt-3 text-first display-3 ps-1">{artist.name}</h1>
+            <span className="text-secondary text-uppercase ps-1">{artist.type}</span>
             <img
               src={`http://127.0.0.1:8000/storage/${artist.img_url}`}
               alt={artist.name}

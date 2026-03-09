@@ -15,15 +15,15 @@ export default function HomePage() {
   return (
     <div className="container mt-4">
       <h2 className="mb-5 text-center display-3"> Edizioni</h2>
-      <div className="row g-5">
+      <div className="row g-1 g-md-5">
         {editions.map((edition) => (
-          <div key={edition.id} className="col-6 col-md-4 mb-4">
+          <div key={edition.id} className="col-12 col-md-6 mb-4">
             <Link
               to={`/editions/${edition.id}`}
               className="text-decoration-none text-dark"
             >
-              <div className="card hover-card text-center h-100 border-0 rounded-circle py-3 px-5">
-                <div className="card-body d-flex flex-column align-items-center justify-content-center p-4">
+              <div className="card hover-card text-center h-100 border-0 rounded-5 py-3 px-5">
+                <div className="card-body d-flex flex-column align-items-center justify-content-center p-2 p-lg-4">
                   <div
                     className="mb-0 d-flex align-items-center justify-content-center"
                     style={{ height: "150px", width: "100%" }}

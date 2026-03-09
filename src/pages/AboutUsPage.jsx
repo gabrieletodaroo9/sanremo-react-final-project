@@ -52,8 +52,8 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      <div className="row g-4 mt-5">
-        <h3 className="fw-bold mb-4 text-uppercase text-center display-5">I nostri numeri</h3>
+      <div className="row g-4 mt-2 mt-md-5">
+        <h3 className="fw-bold mb-2 mb-md-4 text-uppercase text-center display-5">I nostri numeri</h3>
         
         <div className="col-md-4 text-center">
           <div className="p-4">
@@ -77,8 +77,8 @@ export default function AboutUsPage() {
         </div>
       </div>
 
-      <div className=" pt-5 text-center">
-        <Link to="/" className="btn  px-5 py-2 text-uppercase fw-bold fs-4 btn-hover">
+      <div className="pt-2 pt-md-5 text-center">
+        <Link to="/" className="btn  px-5 py-2 pb-0 text-uppercase fw-bold fs-4 btn-hover">
         <i className="bi bi-arrow-left me-2"></i>
           Esplora l'archivio
         </Link>
