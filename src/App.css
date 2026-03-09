@@ -7,10 +7,24 @@
 }
 
 .text-first {
-    color: #6b8da9 !important ;
+    color: #dd2f10 !important ;
 }
 
 .bg-main {
+    background-color: #e2caca !important;
+}
+
+.theme-red .text-first {
+    color: #dd2f10 !important;
+}
+.theme-red .bg-main {
+    background-color: #e2caca !important;
+}
+
+.theme-blue .text-first {
+    color: #6b8da9 !important;
+}
+.theme-blue .bg-main {
     background-color: #d2d7db !important;
 }
 
@@ -74,4 +88,87 @@
   transform: translateY(-8px);
   background: rgba(255, 255, 255, 0.24) !important;
   border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.site-header {
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+}
+
+.site-header.transparent {
+    background-color: transparent;
+    position: absolute; 
+}
+
+.site-header.bg-white {
+    background-color: #ffffff !important;
+}
+
+.input-video::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.input-light::placeholder {
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.btn-hover:hover{
+  scale: 1.05;
+  transition: all 0.2s ease-in-out;
+  border: none;
+}
+
+.btn-theme-toggle {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.btn-theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.btn-theme-toggle i {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-theme-toggle:active i {
+    transform: rotate(180deg);
+}
+
+.result-item {
+  z-index: 10;
+    transition: background 0.2s ease;
+    border-bottom: 1px solid #eee;
+    font-family: sans-serif;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item:hover {
+  scale: 1;
+    background-color: #f8f9fa;
+    text-decoration: none;
+}
+
+.result-item .fw-bold {
+    font-size: 0.95rem;
+    display: block;
+    transition: color 0.2s;
+}
+
+.result-item small {
+    font-size: 0.8rem;
 }

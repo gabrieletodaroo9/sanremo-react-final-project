@@ -21,8 +21,8 @@ export default function EditionPage() {
     );
 
   return (
-    <div className="container mt-5">
-      <Link to="/" className="btn border-0 mb-4 p-0 fs-3">
+    <div className="container mt-1">
+      <Link to="/" className="btn border-0 mb-5 p-0 fs-3">
         <i className="bi bi-arrow-left"></i> Torna
       </Link>
 

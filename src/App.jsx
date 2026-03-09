@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import EditionPage from './pages/EditionPage';
 import SongPage from './pages/SongPage';
 import ArtistPage from './pages/ArtistPage';
+import AboutUsPage from './pages/AboutUsPage';
 
 function App() {
     return (
@@ -11,9 +12,10 @@ function App() {
             <Routes>
                 <Route element={<DefaultLayout />}>
                     <Route path="/" element={<HomePage />} />
-                    <Route path="/editions/:id" element={<EditionPage />} />
+                    <Route path="/aboutus" element={<AboutUsPage />} />
                     <Route path="/songs/:id" element={<SongPage />} />
                     <Route path="/artists/:id" element={<ArtistPage />} />
+                    <Route path="/editions/:id" element={<EditionPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>

@@ -14,7 +14,7 @@ export default function HomePage() {
 
   return (
     <div className="container mt-4">
-      <h2 className="mb-3 text-center display-3"> Edizioni</h2>
+      <h2 className="mb-5 text-center display-3"> Edizioni</h2>
       <div className="row g-5">
         {editions.map((edition) => (
           <div key={edition.id} className="col-6 col-md-4 mb-4">
