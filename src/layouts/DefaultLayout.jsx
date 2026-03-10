@@ -6,7 +6,7 @@ import Header from "../components/Header";
 export default function DefaultLayout() {
     const location = useLocation();
     
-    const [isRedTheme, setIsRedTheme] = useState(true);
+    const [isRedTheme, setIsRedTheme] = useState(false);
 
     const showVideo = location.pathname === "/" || location.pathname === "/aboutus";
 

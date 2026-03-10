@@ -5,10 +5,12 @@ import EditionPage from './pages/EditionPage';
 import SongPage from './pages/SongPage';
 import ArtistPage from './pages/ArtistPage';
 import AboutUsPage from './pages/AboutUsPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
     return (
         <BrowserRouter>
+        <ScrollToTop />
             <Routes>
                 <Route element={<DefaultLayout />}>
                     <Route path="/" element={<HomePage />} />
