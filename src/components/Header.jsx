@@ -20,18 +20,22 @@ export default function Header({ logo }) {
     .catch(err => console.error(err))
   }, [])
 
-  const closeMenu = () => {
+  function closeMenu() {
     const collapse = document.getElementById("navbarSanremo")
     if (collapse?.classList.contains("show")) document.querySelector(".navbar-toggler")?.click()
   }
 
-  const handleSearch = (e) => {
+  function handleSearch(e){
     const value = e.target.value
     setQuery(value)
-    setResults(value.trim().length > 1 ? allSongs.filter(song => song.title?.toLowerCase().includes(value.toLowerCase())).slice(0, 5) : []);
-  };
+    setResults(value.trim().length > 1 ? allSongs.filter(song => song.title?.toLowerCase().includes(value.toLowerCase())).slice(0, 5) : [])
+  }
 
-  const clearSearch = () => { setResults([]); setQuery(""); closeMenu(); };
+  function clearSearch() {
+    setResults([])
+    setQuery("")
+    closeMenu()
+  }
 
   return (
 
@@ -72,5 +76,5 @@ export default function Header({ logo }) {
         </div>
       </div>
     </nav>
-  );
+  )
 }
