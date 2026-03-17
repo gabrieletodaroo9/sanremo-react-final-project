@@ -10,8 +10,12 @@ export default function ArtistPage() {
   useEffect(() => {
     axios.get(`http://127.0.0.1:8000/api/artists/${id}`)
     .then(res => setArtist(res.data.data))
-    .catch(err => console.error(err))
-  }, [id])
+    .catch(err => {
+      if (err.response) {
+        navigate("/404")
+      }
+    })
+    }, [id, navigate])
 
   if (!artist) return <div className="container mt-5 text-center text-muted">Caricamento artista...</div>
 

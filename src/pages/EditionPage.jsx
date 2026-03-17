@@ -1,16 +1,20 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function EditionPage() {
   const { id } = useParams()
+  const navigate = useNavigate()
   const [edition, setEdition] = useState(null)
 
   useEffect(() => {
     axios.get(`http://127.0.0.1:8000/api/editions/${id}`)
-    .then(res => setEdition(res.data.data))
-    .catch(err => console.error(err))
-  }, [id])
+      .then(res => setEdition(res.data.data))
+      .catch(err => {
+        if (err.response) {
+          navigate("/404")
+        }})
+  }, [id, navigate])
 
   if (!edition) return <div className="container mt-5 text-center text-muted">Caricamento in corso...</div>
 

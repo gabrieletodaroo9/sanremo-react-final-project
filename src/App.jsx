@@ -6,6 +6,7 @@ import SongPage from './pages/SongPage';
 import ArtistPage from './pages/ArtistPage';
 import AboutUsPage from './pages/AboutUsPage';
 import ScrollToTop from './components/ScrollToTop';
+import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/songs/:id" element={<SongPage />} />
                     <Route path="/artists/:id" element={<ArtistPage />} />
                     <Route path="/editions/:id" element={<EditionPage />} />
+                    <Route path="*" element={<NotFoundPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>

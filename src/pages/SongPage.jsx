@@ -11,8 +11,12 @@ export default function SongPage() {
   useEffect(() => {
     axios.get(`http://127.0.0.1:8000/api/songs/${id}`)
     .then(res => setSong(res.data.data))
-    .catch(err => console.error(err))
-  }, [id])
+    .catch(err => {
+      if (err.response) {
+        navigate("/404")
+      }
+    })
+    }, [id, navigate])
 
   if (!song) return <div className="container mt-5 text-center text-muted">Caricamento canzone...</div>
 
